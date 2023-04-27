@@ -1,0 +1,29 @@
+<h1>Add User Form</h1>
+<form method="POST" action="{% url 'createUser' %}">
+
+    {% csrf_token %}
+    <tr>
+        <td>Name</td>
+        <td><input type=" text" name="name" placeholder="ENTER YOUR NAME" required>
+        </td>
+    </tr>
+    <br /><br />
+    <tr>
+        <td>Address</td>
+        <td><input type="text" name="address" placeholder="ENTER YOUR ADDRESS" required></td>
+    </tr>
+    <br /><br />
+    <tr>
+        <td>Phone Number</td>
+        <td><input type="text" name="phone_number" placeholder="ENTER YOUR PHONENUMBER" required></td>
+    </tr>
+    <br /><br />
+    <tr>
+        <td>Date of Sale</td>
+        <td><input type="text" name="product_saledate" placeholder="Date Of Sale" required></td>
+    </tr>
+    <br /><br />
+    <tr>
+        <td><button type="submit">SUMIT</button></td>
+    </tr>
+</form>

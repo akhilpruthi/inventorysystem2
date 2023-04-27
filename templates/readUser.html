@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in context %}
+        <tr>
+            <th><a href="{% url 'readUserDetail' id=i.id %}">{{i.id}}</a></th>
+            <td>{{i.name}}</td>
+        </tr>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <h1>USER DETAIL PAGE</h1>
+</head>
+<table>
+    <tbody>
+        <tr>
+            <th>NAME</th>
+            <td>{{context.name}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{context.address}}</td>
+        </tr>
+        <tr>
+            <th>Phone Number</th>
+            <td>{{context.phone_number}}</td>
+        </tr>
+        <tr>
+            <th>Product Sale Date </th>
+            <td>{{context.product_saledate}}</td>
+        </tr>
+        <tr>
+            <th>ACTION</th>
+            <td>
+                <a href="{% url 'editUser' id=context.id %}"><button>EDIT</button></a>
+                <br />
+                <a href="{% url 'deleteUser' id=context.id %}"><button>DELETE</button></a>
+                <br />
+                <a href="{% url 'qr_gen' id=context.id %}"><button>Generate Qr CODE</button></a>
+            </td>
+
+        </tr>
+
+
+
+    </tbody>
+
+</table>
+
+</html>
